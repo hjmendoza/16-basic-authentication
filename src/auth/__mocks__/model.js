@@ -1,5 +1,6 @@
 'use strict';
 
+// to make a unit work w/mock needs to be a constructor or a class
 export default {
 
   authenticate: (auth) => {
@@ -12,5 +13,4 @@ export default {
       return Promise.resolve(null);
     }
   },
-
 };
