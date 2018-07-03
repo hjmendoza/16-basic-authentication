@@ -20,7 +20,6 @@ userSchema.pre('save', function(next) {
       // Continue on (actually do the save)
       next();
     })
-    // In the event of an error, do not save, but throw it instead
     .catch( error => {throw error;} );
 });
 

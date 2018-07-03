@@ -23,7 +23,9 @@ describe('Authentication Server', () => {
 
   it('gets a 401 on a bad login', () => {
     return superagent.get(API_URL + '/signin')
-      .then(response => {})
+      .then(response => {
+        console.log(response);
+      })
       .catch(response => {
         expect(response.status).toEqual(401);
       });
