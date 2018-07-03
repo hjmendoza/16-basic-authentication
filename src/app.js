@@ -16,10 +16,10 @@ app.use(morgan('dev'));
 app.use(express.json());  // => req.body
 app.use(express.urlencoded({extended:true})); // req.body => from a form's key value pairs
 
-app.use(authRouter);
+app.use('/', authRouter);
 
-app.use(notFound);
-app.use(errorHandler);
+app.use('*', notFound);
+app.use('*', errorHandler);
 
 let server = false;
 
